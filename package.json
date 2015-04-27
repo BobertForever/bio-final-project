@@ -12,9 +12,9 @@
     ]
   },
   "dependencies": {
-    "material-ui": "0.7.1",
-    "react": "0.12.2",
-    "react-router": "0.12.4",
+    "material-ui": "0.7.4",
+    "react": "^0.13",
+    "react-router": "^0.13",
     "browserify": "^9.0.3",
     "gulp": "*",
     "gulp-autoprefixer": "*",
