@@ -58,6 +58,15 @@ menuItems = [
 /* Master handler */
 class Master extends React.Component {
 
+  constructor() {
+    super();
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(e, selectedIndex, menuItem) {
+    this.context.router.transitionTo(menuItem['route']);
+  }
+
   render() {
     return (
       <AppCanvas predefinedLayout={1}>
@@ -66,7 +75,11 @@ class Master extends React.Component {
           onMenuIconButtonTouchTap={() => this.refs.leftnav.toggle()}
           zDepth={1} />
 
-        <LeftNav docked={false} menuItems={menuItems} ref="leftnav" />
+        <LeftNav
+          docked={false}
+          menuItems={menuItems}
+          ref="leftnav"
+          onChange={this.onChange} />
 
         <div className="container-fluid">
           <div className="col-md-8 col-md-offset-2 offset">
@@ -79,6 +92,10 @@ class Master extends React.Component {
     );
   }
 }
+
+Master.contextTypes = {
+  router: React.PropTypes.func
+};
 
 /* Setup the routes */
 var appRoutes = (
