@@ -57,7 +57,16 @@ menuItems = [
 ];
 
 /* Master handler */
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Master[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Master.prototype=Object.create(____SuperProtoOf____Class0);Master.prototype.constructor=Master;Master.__superConstructor__=____Class0;function Master(){"use strict";if(____Class0!==null){____Class0.apply(this,arguments);}}
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Master[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Master.prototype=Object.create(____SuperProtoOf____Class0);Master.prototype.constructor=Master;Master.__superConstructor__=____Class0;
+
+  function Master() {"use strict";
+    ____Class0.call(this);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  Object.defineProperty(Master.prototype,"onChange",{writable:true,configurable:true,value:function(e, selectedIndex, menuItem) {"use strict";
+    this.context.router.transitionTo(menuItem['route']);
+  }});
 
   Object.defineProperty(Master.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
@@ -67,7 +76,11 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
           onMenuIconButtonTouchTap: function()  {return this.refs.leftnav.toggle();}.bind(this), 
           zDepth: 1}), 
 
-        React.createElement(LeftNav, {docked: false, menuItems: menuItems, ref: "leftnav"}), 
+        React.createElement(LeftNav, {
+          docked: false, 
+          menuItems: menuItems, 
+          ref: "leftnav", 
+          onChange: this.onChange}), 
 
         React.createElement("div", {className: "container-fluid"}, 
           React.createElement("div", {className: "col-md-8 col-md-offset-2 offset"}, 
@@ -80,6 +93,10 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
     );
   }});
 
+
+Master.contextTypes = {
+  router: React.PropTypes.func
+};
 
 /* Setup the routes */
 var appRoutes = (
@@ -101,7 +118,7 @@ Router.run(appRoutes, function(Handler) {
 },{"./components/about":2,"./components/activation-energy":3,"./components/enzyme-police":4,"./components/index":5,"./components/ingredients":6,"./components/inside-enzyme":7,"./components/substrate-diagram":8,"material-ui":165,"react":449,"react-router":258,"react-tap-event-plugin":276}],2:[function(require,module,exports){
 var React = require('React');
 
-var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____Class3.hasOwnProperty(____Class3____Key)){About[____Class3____Key]=____Class3[____Class3____Key];}}var ____SuperProtoOf____Class3=____Class3===null?null:____Class3.prototype;About.prototype=Object.create(____SuperProtoOf____Class3);About.prototype.constructor=About;About.__superConstructor__=____Class3;function About(){"use strict";if(____Class3!==null){____Class3.apply(this,arguments);}}
+var ____Class2=React.Component;for(var ____Class2____Key in ____Class2){if(____Class2.hasOwnProperty(____Class2____Key)){About[____Class2____Key]=____Class2[____Class2____Key];}}var ____SuperProtoOf____Class2=____Class2===null?null:____Class2.prototype;About.prototype=Object.create(____SuperProtoOf____Class2);About.prototype.constructor=About;About.__superConstructor__=____Class2;function About(){"use strict";if(____Class2!==null){____Class2.apply(this,arguments);}}
   Object.defineProperty(About.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
       React.createElement("p", null, "Hello, World!")
@@ -115,7 +132,7 @@ module.exports = About;
 },{"React":163}],3:[function(require,module,exports){
 var React = require('React');
 
-var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____Class5.hasOwnProperty(____Class5____Key)){ActivationEnergy[____Class5____Key]=____Class5[____Class5____Key];}}var ____SuperProtoOf____Class5=____Class5===null?null:____Class5.prototype;ActivationEnergy.prototype=Object.create(____SuperProtoOf____Class5);ActivationEnergy.prototype.constructor=ActivationEnergy;ActivationEnergy.__superConstructor__=____Class5;function ActivationEnergy(){"use strict";if(____Class5!==null){____Class5.apply(this,arguments);}}
+var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____Class3.hasOwnProperty(____Class3____Key)){ActivationEnergy[____Class3____Key]=____Class3[____Class3____Key];}}var ____SuperProtoOf____Class3=____Class3===null?null:____Class3.prototype;ActivationEnergy.prototype=Object.create(____SuperProtoOf____Class3);ActivationEnergy.prototype.constructor=ActivationEnergy;ActivationEnergy.__superConstructor__=____Class3;function ActivationEnergy(){"use strict";if(____Class3!==null){____Class3.apply(this,arguments);}}
   Object.defineProperty(ActivationEnergy.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
       React.createElement("div", null, 
@@ -126,11 +143,28 @@ var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____C
         "of the reactants as a boulder sitting on top of a hill. The ball has potential energy and" + ' ' +
         "favors rolling down the hill. It won't move, however, until it is given a push to get it" + ' ' +
         "rolling."), 
+        React.createElement("img", {src: "img/img1.gif"}), 
         React.createElement("p", null, "Similarly, an enzyme lowers the activation energy of a reaction by binding to substrates" + ' ' +
         "and providing the proper environment for reactions to proceed. It is important to note that" + ' ' +
         "enzymes do not change the overall Free Energy of a reaction. The reactions take place" + ' ' +
         "without enzymes but with greatly decreased frequency because of the random motion of" + ' ' +
-        "molecules.")
+        "molecules."), 
+        React.createElement("img", {src: "img/img2.jpg"}), 
+        React.createElement("p", null, "Enzymes increase the rate of these reactions and are therefore, important in every" + ' ' +
+        "complex metabolic pathway. Take, for example, cellular respiration. This process is," + ' ' +
+        "overall, an exergonic one. Imagine, however, trying to convert the food you eat into" + ' ' +
+        "chemical energy your body can use without enzymes. The number of steps in this pathway" + ' ' +
+        "would make this kind of spontaneous reaction virtually impossible because the rate of" + ' ' +
+        "reaction would be infinitely small compared to the rate of consumption. Enzymes accomplish" + ' ' +
+        "this important role by specifically binding to certain substrates (or close relatives) at" + ' ' +
+        "the active site. The enzymes \"hug\" the substrates in a form called induced fit."), 
+        React.createElement("img", {src: "img/img3.jpg"}), 
+        React.createElement("p", null, "Here, the side chains of the enzyme can interact with the substrate to facilitate the" + ' ' +
+        "reaction."), 
+        React.createElement("hr", null), 
+        React.createElement("h3", null, "Some Helpful Videos"), 
+        React.createElement("iframe", {width: "560", height: "315", src: "https://www.youtube.com/embed/j00Ep0Byu0Y"}), 
+        React.createElement("iframe", {width: "560", height: "315", src: "https://www.youtube.com/embed/YacsIU97OFc"})
       )
     );
   }});
@@ -170,10 +204,34 @@ module.exports = Index;
 },{"React":163}],6:[function(require,module,exports){
 var React = require('React');
 
-var ____Class4=React.Component;for(var ____Class4____Key in ____Class4){if(____Class4.hasOwnProperty(____Class4____Key)){Ingredients[____Class4____Key]=____Class4[____Class4____Key];}}var ____SuperProtoOf____Class4=____Class4===null?null:____Class4.prototype;Ingredients.prototype=Object.create(____SuperProtoOf____Class4);Ingredients.prototype.constructor=Ingredients;Ingredients.__superConstructor__=____Class4;function Ingredients(){"use strict";if(____Class4!==null){____Class4.apply(this,arguments);}}
+var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____Class5.hasOwnProperty(____Class5____Key)){Ingredients[____Class5____Key]=____Class5[____Class5____Key];}}var ____SuperProtoOf____Class5=____Class5===null?null:____Class5.prototype;Ingredients.prototype=Object.create(____SuperProtoOf____Class5);Ingredients.prototype.constructor=Ingredients;Ingredients.__superConstructor__=____Class5;function Ingredients(){"use strict";if(____Class5!==null){____Class5.apply(this,arguments);}}
   Object.defineProperty(Ingredients.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
-      React.createElement("p", null, "Hello, World!")
+      React.createElement("div", null, 
+        React.createElement("h2", null, "Enzyme Ingredients: Factors Affecting Enzyme Activity"), 
+        React.createElement("p", null, React.createElement("b", null, "Enzyme Concentration"), ": In order to study the effect of increasing enzyme" + ' ' +
+        "concentration on the reaction rate, the reaction must be independent of the substrate" + ' ' +
+        "concentration. The level of the enzyme present will dictate how much product is formed, as" + ' ' +
+        "illustrated by the graph."), 
+        React.createElement("img", {src: "img/img6.png"}), 
+        React.createElement("p", null, React.createElement("b", null, "Substrate Concentration"), ": Each enzyme needs the right kind of substrate(s) to" + ' ' +
+        "perform the reaction. If the amount of enzyme is kept constant and the substrate" + ' ' +
+        "concentration is increased, the reaction velocity will increase until it reaches a maximum," + ' ' +
+        "as shown with in the graph."), 
+        React.createElement("img", {src: "img/img7.png"}), 
+        React.createElement("p", null, React.createElement("b", null, "Temperature"), ": Each enzyme has an optimum temperature for maximum activity. In the" + ' ' +
+        "human body, the optimum temperature for enzymes is 37°C. In bacteria, the optimum" + ' ' +
+        "temperature for enzymes is 72°C.  The reaction rate increases with temperature to a maximum" + ' ' +
+        "level, then quickly declines with further increase of temperature. Over a period of time," + ' ' +
+        "enzymes will be deactivated at even moderate temperatures."), 
+        React.createElement("img", {src: "img/img8.png"}), 
+        React.createElement("p", null, React.createElement("b", null, "pH"), ": Enzymes require an optimum pH to operate. Extremely high or low pH values" + ' ' +
+        "generally result in complete loss of activity for most enzymes."), 
+        React.createElement("img", {src: "img/img9.png"}), 
+        React.createElement("p", null, React.createElement("b", null, "Salt"), ": Enzymes require the presence of certain ions or salts at certain" + ' ' +
+        "concentrations to catalyze reactions."), 
+        React.createElement("img", {src: "img/img10.png"})
+      )
     );
   }});
 
@@ -198,7 +256,7 @@ module.exports = InsideEnzyme;
 },{"React":163}],8:[function(require,module,exports){
 var React = require('React');
 
-var ____Class2=React.Component;for(var ____Class2____Key in ____Class2){if(____Class2.hasOwnProperty(____Class2____Key)){SubstrateDiagram[____Class2____Key]=____Class2[____Class2____Key];}}var ____SuperProtoOf____Class2=____Class2===null?null:____Class2.prototype;SubstrateDiagram.prototype=Object.create(____SuperProtoOf____Class2);SubstrateDiagram.prototype.constructor=SubstrateDiagram;SubstrateDiagram.__superConstructor__=____Class2;function SubstrateDiagram(){"use strict";if(____Class2!==null){____Class2.apply(this,arguments);}}
+var ____Class4=React.Component;for(var ____Class4____Key in ____Class4){if(____Class4.hasOwnProperty(____Class4____Key)){SubstrateDiagram[____Class4____Key]=____Class4[____Class4____Key];}}var ____SuperProtoOf____Class4=____Class4===null?null:____Class4.prototype;SubstrateDiagram.prototype=Object.create(____SuperProtoOf____Class4);SubstrateDiagram.prototype.constructor=SubstrateDiagram;SubstrateDiagram.__superConstructor__=____Class4;function SubstrateDiagram(){"use strict";if(____Class4!==null){____Class4.apply(this,arguments);}}
   Object.defineProperty(SubstrateDiagram.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
       React.createElement("div", null, 
