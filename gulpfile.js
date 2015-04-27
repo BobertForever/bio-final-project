@@ -3,7 +3,13 @@ var gulp          = require('gulp'),
     source        = require('vinyl-source-stream'),
     less          = require('gulp-less'),
     sourcemaps    = require('gulp-sourcemaps'),
-    autoprefixer  = require('gulp-autoprefixer');
+    autoprefixer  = require('gulp-autoprefixer'),
+    ghPages       = require('gulp-gh-pages');
+
+gulp.task('deploy', ['build'], function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
 
 gulp.task('browserify', function() {
   var bundler = browserify('./js/app.js')
