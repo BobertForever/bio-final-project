@@ -12,7 +12,17 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('less', function() {
+gulp.task('images', function() {
+  return gulp.src('images/**.*')
+    .pipe(gulp.dest('build/img'));
+})
+
+gulp.task('css', function() {
+  return gulp.src('css/**.css')
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('less', ['css'], function() {
   return gulp.src('./css/main.less')
     .pipe(sourcemaps.init())
     .pipe(less())
@@ -29,7 +39,7 @@ gulp.task('watch', function() {
   gulp.watch('./js/**/*.js', ['browserify']);
 });
 
-gulp.task('build', ['browserify', 'less'], function() {
+gulp.task('build', ['browserify', 'less', 'images'], function() {
   return gulp.src('./index.html')
     .pipe(gulp.dest('./build'));
 });
