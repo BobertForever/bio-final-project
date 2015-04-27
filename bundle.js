@@ -245,7 +245,34 @@ var React = require('React');
 var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____Class6.hasOwnProperty(____Class6____Key)){InsideEnzyme[____Class6____Key]=____Class6[____Class6____Key];}}var ____SuperProtoOf____Class6=____Class6===null?null:____Class6.prototype;InsideEnzyme.prototype=Object.create(____SuperProtoOf____Class6);InsideEnzyme.prototype.constructor=InsideEnzyme;InsideEnzyme.__superConstructor__=____Class6;function InsideEnzyme(){"use strict";if(____Class6!==null){____Class6.apply(this,arguments);}}
   Object.defineProperty(InsideEnzyme.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
-      React.createElement("p", null, "Hello, World!")
+      React.createElement("div", null, 
+        React.createElement("h2", null, "Inside the Enzyme”: How do enzymes work chemically?"), 
+        React.createElement("p", null, "All known enzymes are proteins: high molecular weight (10,000 to 2,000,000) compounds" + ' ' +
+        "made up mostly of chains of amino acids linked together by peptide bonds. With salts," + ' ' +
+        "solvents and other reagents, enzymes can be denatured and precipitated."), 
+        React.createElement("img", {src: "img/img11.png"}), 
+        React.createElement("p", null, "Enzymes recognize their substrates by their functional groups and molecular shape, and" + ' ' +
+        "change their conformation to fit the substrate. The substrate and the active site of the" + ' ' +
+        "enzyme can have an ionic interaction, H-bonding, van der Waals interaction, or covalent" + ' ' +
+        "bonding to allow the enzyme to perform its catalytic function, making the reaction" + ' ' +
+        "spontaneous and reducing the activation energy."), 
+        React.createElement("img", {src: "img/img12.png"}), 
+        React.createElement("p", null, "Many enzymes require the presence of other compounds, cofactors, before their catalytic" + ' ' +
+        "activity can be exerted. This entire active complex is referred to as the holoenzyme. The" + ' ' +
+        "protein portion is called the apoenzyme and the cofactor, which is the coenzyme, prosthetic" + ' ' +
+        "group, or metal-ion-activator, is called the holoenzyme."), 
+        "The cofactor may be:", 
+        React.createElement("ol", null, 
+          React.createElement("li", null, "A coenzyme - a non-protein organic substance which is dialyzable, thermostable and" + ' ' +
+          "loosely attached to the protein part."), 
+          React.createElement("li", null, "A prosthetic group - an organic substance which is dialyzable and thermostable which" + ' ' +
+          "is firmly attached to the protein or apoenzyme portion."), 
+          React.createElement("li", null, "A metal-ion-activator - including K", React.createElement("sup", null, "+"), ", Fe", React.createElement("sup", null, "++"), ", Fe", React.createElement("sup", null, "+++"), "," + ' ' +
+          "Cu", React.createElement("sup", null, "++"), ", Co", React.createElement("sup", null, "++"), ", Zn", React.createElement("sup", null, "++"), ", Mn", React.createElement("sup", null, "++"), ", Mg", React.createElement("sup", null, "++"), ",", 
+          React.createElement("sup", null, "Ca++"), ", and Mo", React.createElement("sup", null, "+++"), ".")
+        ), 
+        React.createElement("img", {src: "img/img13.png"})
+      )
     );
   }});
 
