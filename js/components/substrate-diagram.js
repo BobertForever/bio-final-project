@@ -1,6 +1,6 @@
 var React = require('React');
 
-class About extends React.Component {
+class SubstrateDiagram extends React.Component {
   render() {
     return (
       <p>Hello, World!</p>
@@ -8,4 +8,4 @@ class About extends React.Component {
   }
 }
 
-module.exports = About;
+module.exports = SubstrateDiagram;
