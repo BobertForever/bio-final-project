@@ -3,11 +3,12 @@ var React                 = require('react');
     mui                   = require('material-ui'),
     injectTapEventPlugin  = require('react-tap-event-plugin');
 
-var { AppCanvas, AppBar, Paper, LaftNav } = mui;
+var { AppCanvas, AppBar, Paper, LeftNav } = mui;
 var { Route, DefaultRoute, RouteHandler } = Router;
 
 /* Components */
-var About             = require('./components/about'),
+var Index             = require('./components/index')
+    About             = require('./components/about'),
     ActivationEnergy  = require('./components/activation-energy'),
     SubstrateDiagram  = require('./components/substrate-diagram'),
     Ingredients       = require('./components/ingredients'),
@@ -44,12 +45,12 @@ menuItems = [
   },
   {
     route: 'inside-the-enzyme',
-    test: 'Inside the Enzyme',
+    text: 'Inside the Enzyme',
     handler: InsideEnzyme
   },
   {
     route: 'enzyme-police',
-    text: 'Enzyme Police: Regulation of Enzyme Activity',
+    text: 'Regulation of Enzyme Activity',
     handler: EnzymePolice
   }
 ];
@@ -62,10 +63,10 @@ class Master extends React.Component {
       <AppCanvas predefinedLayout={1}>
         <AppBar
           title="Bio 311C Final Project"
-          onMenuIconButtonTouchTap={() => this.refs.left-nav.toggle()}
+          onMenuIconButtonTouchTap={() => this.refs.leftnav.toggle()}
           zDepth={1} />
 
-        <LeftNav docked={false} menuItems={menuItems} ref="left-nav" />
+        <LeftNav docked={false} menuItems={menuItems} ref="leftnav" />
 
         <Paper zDepth={0}>
           <RouteHandler />
