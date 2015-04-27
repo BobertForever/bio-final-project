@@ -68,9 +68,13 @@ class Master extends React.Component {
 
         <LeftNav docked={false} menuItems={menuItems} ref="leftnav" />
 
-        <Paper zDepth={0}>
-          <RouteHandler />
-        </Paper>
+        <div className="container-fluid">
+          <div className="col-md-8 col-md-offset-2 offset">
+            <Paper zDepth={1} className="white">
+              <RouteHandler />
+            </Paper>
+          </div>
+        </div>
       </AppCanvas>
     );
   }
