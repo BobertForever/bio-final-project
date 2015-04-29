@@ -101,7 +101,7 @@ Master.contextTypes = {
 var appRoutes = (
   <Route name="root" path="/" handler={Master}>
     {menuItems.map(function(result) {
-      return <Route name={result.route} handler={result.handler} />
+      return <Route key={result.route} name={result.route} handler={result.handler} />
     })}
 
     <DefaultRoute handler={Index} />
