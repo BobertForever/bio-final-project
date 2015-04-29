@@ -1,4 +1,4 @@
-var React = require('React');
+var React = require('react');
 
 class ActivationEnergy extends React.Component {
   render() {
