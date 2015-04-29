@@ -1,10 +1,29 @@
-var React = require('React');
+var React     = require('react'),
+    Practice  = require('./practice');
 
 class InsideEnzyme extends React.Component {
   render() {
+    var questions = [
+      {
+        question: "Which group of organic compounds includes the enzymes?",
+        answers: ["carbohydrates", "proteins", "lipids", "fats"],
+        answer: "proteins"
+      },
+      {
+        question: "Any substance that is acted upon by an enzyme is called a(n):",
+        answers: ["vitamin", "substrate", "inhibitor", "amino acid"],
+        answer: "substrate"
+      },
+      {
+        question: "At 0°C, an enzyme will be:",
+        answers: ["active", "spinning", "inactive", "shrunk"],
+        answer: "inactive"
+      }
+    ];
+
     return (
       <div>
-        <h2>Inside the Enzyme”: How do enzymes work chemically?</h2>
+        <h2>Inside the Enzyme: How do enzymes work chemically?</h2>
         <p>All known enzymes are proteins: high molecular weight (10,000 to 2,000,000) compounds
         made up mostly of chains of amino acids linked together by peptide bonds. With salts,
         solvents and other reagents, enzymes can be denatured and precipitated.</p>
@@ -27,9 +46,14 @@ class InsideEnzyme extends React.Component {
           is firmly attached to the protein or apoenzyme portion.</li>
           <li>A metal-ion-activator - including K<sup>+</sup>, Fe<sup>++</sup>, Fe<sup>+++</sup>,
           Cu<sup>++</sup>, Co<sup>++</sup>, Zn<sup>++</sup>, Mn<sup>++</sup>, Mg<sup>++</sup>,
-          <sup>Ca++</sup>, and Mo<sup>+++</sup>.</li>
+          Ca<sup>++</sup>, and Mo<sup>+++</sup>.</li>
         </ol>
         <img src='img/img13.png' />
+        <div style={{height: '32'}}></div>
+        <hr />
+        <h3>Practice</h3>
+        <p>Which group of organic compounds includes the enzymes?</p>
+        <Practice questions={questions} />
       </div>
     );
   }
