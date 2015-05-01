@@ -1,7 +1,80 @@
-var React = require('react');
+var React     = require('react'),
+    Practice  = require('./practice');
 
 class EnzymePolice extends React.Component {
   render() {
+    var questions = [
+      {
+        question: "What is the effect of a competitive inhibitor on an enzyme?",
+        answers: [
+          "Different Vmax, same Km",
+          "Same Vmax, same Km",
+          "Different Vmax, different Km",
+          "Same Vmax, different Km",
+          "No effect"
+        ],
+        answer: "Same Vmax, different Km"
+      },
+      {
+        question: "What is the effect of a non-competitive inhibitor on an enzyme?",
+        answers: [
+          "Same Vmax, different Km",
+          "Same Vmax, same Km",
+          "Different Vmax, same Km",
+          "Different Vmax, different Km",
+          "No effect"
+        ],
+        answer: "Different Vmax, same Km"
+      },
+      {
+        question: "Which would have a highest Vmax?",
+        answers: [
+          "A) Normal enzyme",
+          "B) Competitive inhibitor",
+          "C) Non-competitive inhibitor",
+          "D) A and B",
+          "E) A and C"
+        ],
+        answer: "D) A and B"
+      },
+      {
+        question: "When a substrate binds to an active site of an allosteric enzyme, all of the following happen except",
+        answers: [
+          "The other active sites bind more substrate",
+          "The conformation of all the active sites change",
+          "The binding of an allosteric activator becomes more likely",
+          "None of the above, all are true."
+        ],
+        answer: "The binding of an allosteric activator becomes more likely"
+      },
+      {
+        question: "Allosteric regulation of enzyme activity involves",
+        answers: [
+          "Competitive binding at the enzyme active site",
+          "Conformational change in the enzyme due to the binding at the allosteric site",
+          "Turning off genes that code for enzyme production",
+          "Binding of an allosteric inhibitor to the substrate"
+        ],
+        answer: "Conformational change in the enzyme due to the binding at the allosteric site"
+      },
+      {
+        question: "In feedback regulation what would the product of one pathway be for the next step of the pathway?",
+        answers: [
+          "An inhibitor",
+          "An activator",
+          "The substrate",
+          "A protein",
+          "None of the above"
+        ],
+        answer: "The substrate"
+      },
+      {
+        question: "In feedback regulation the biochemical pathway never stops and continues to produce the end products no matter the concentration or build-up.",
+        answers: ["true", "false"],
+        answer: "false"
+      }
+    ];
+
     return (
       <div>
         <h2>Enzyme Police: Regulation of Enzyme Activity</h2>
@@ -70,6 +143,10 @@ class EnzymePolice extends React.Component {
         enzymes to change their function in this body. Examples of this include all types of
         allosteric regulation and feedback regulation. The goal of chemically modifying these
         enzymes or proteins is to make them active or inactive in the body.</p>
+        <div style={{height: '32'}}></div>
+        <hr />
+        <h3>Practice</h3>
+        <Practice questions={questions} />
       </div>
     );
   }
