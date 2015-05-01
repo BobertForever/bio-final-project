@@ -1,7 +1,31 @@
-var React = require('react');
+var React     = require('react'),
+    Practice  = require('./practice');
 
 class ActivationEnergy extends React.Component {
   render() {
+    var questions = [
+      {
+        question: "Enzymes cause an overall change in the free energy of a reaction.",
+        answers: ["true", "false"],
+        answer: "false"
+      },
+      {
+        question: "Enzymes lower the activation energy of a reaction.",
+        answers: ["true", "false"],
+        answer: "true"
+      },
+      {
+        question: "Enzymes bind to substrates at their active site.",
+        answers: ["true", "false"],
+        answer: "true"
+      },
+      {
+        question: "One enzyme often can bind to many substrates.",
+        answers: ["true", "false"],
+        answer: "false"
+      }
+    ];
+
     return (
       <div>
         <h2>Enzymes and Activation Energy</h2>
@@ -33,6 +57,10 @@ class ActivationEnergy extends React.Component {
         <h3>Some Helpful Videos</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/j00Ep0Byu0Y"></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/YacsIU97OFc"></iframe>
+        <div style={{height: '32'}}></div>
+        <hr />
+        <h3>Practice</h3>
+        <Practice questions={questions} />
       </div>
     );
   }

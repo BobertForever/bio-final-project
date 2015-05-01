@@ -1,7 +1,37 @@
-var React = require('react');
+var React     = require('react'),
+    Practice  = require('./practice');
 
 class SubstrateDiagram extends React.Component {
   render() {
+    var questions = [
+      {
+        question: "Given that the lines I, II and III are obtained after using various molecules in the enzyme reaction, which line represents a reaction with competitive inhibitor?",
+        answers: ["I", "II", "III", "Both I and II", "Both II and III"],
+        answer: "II"
+      },
+      {
+        question: "Which line shows the response of adding an activator to the enzyme reaction?",
+        answers: ["I", "II", "III", "Both I and II", "Both II and III"],
+        answer: "I"
+      },
+      {
+        question: "Which line shows the response of enzyme + substrate and non-competitive Inhibitor?",
+        answers: ["I", "II", "III", "Both I and II", "Both II and III"],
+        answer: "III"
+      },
+      {
+        question: "An enzyme was tested with two different substrates A and B resulting in products X and Y.  The Km for substrate A was 10 mM and the Km for substrate B was 100 mM. From this information, we can say that.",
+        answers: [
+          "substrate A is less effective than substrate B to have same amount of products formed.",
+          "substrate B is less effective than substrate A to have same amount of products formed.",
+          "There is no difference between A and B in terms of products formed.",
+          "X is produced less than Y with same amount of substrate used.",
+          "Y is produced more than X with same amount of substrate used."
+        ],
+        answer: "substrate B is less effective than substrate A to have same amount of products formed."
+      }
+    ];
+
     return (
       <div>
         <h2>Substrate Diagram</h2>
@@ -35,6 +65,12 @@ class SubstrateDiagram extends React.Component {
           concentration (Km unchanged) but the maximum rate of reaction is lowered (Vmax
           decreases).</li>
         </ul>
+        <div style={{height: '32'}}></div>
+        <hr />
+        <h3>Practice</h3>
+        <p>Use the follow image to answer questions 1-3</p>
+        <img src='img/img5.png' />
+        <Practice questions={questions} />
       </div>
     );
   }
