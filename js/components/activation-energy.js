@@ -53,6 +53,7 @@ class ActivationEnergy extends React.Component {
         <img src="img/img3.jpg" />
         <p>Here, the side chains of the enzyme can interact with the substrate to facilitate the
         reaction.</p>
+        <div style={{height: '32'}}></div>
         <hr/>
         <h3>Some Helpful Videos</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/j00Ep0Byu0Y"></iframe>
