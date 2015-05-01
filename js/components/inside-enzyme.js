@@ -15,7 +15,7 @@ class InsideEnzyme extends React.Component {
         answer: "substrate"
       },
       {
-        question: "At 0°C, an enzyme will be:",
+        question: "At 0 degrees celcius, an enzyme will be:",
         answers: ["active", "spinning", "inactive", "shrunk"],
         answer: "inactive"
       }
@@ -52,7 +52,6 @@ class InsideEnzyme extends React.Component {
         <div style={{height: '32'}}></div>
         <hr />
         <h3>Practice</h3>
-        <p>Which group of organic compounds includes the enzymes?</p>
         <Practice questions={questions} />
       </div>
     );
