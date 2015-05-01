@@ -57,10 +57,10 @@ menuItems = [
 ];
 
 /* Master handler */
-var ____ClassS=React.Component;for(var ____ClassS____Key in ____ClassS){if(____ClassS.hasOwnProperty(____ClassS____Key)){Master[____ClassS____Key]=____ClassS[____ClassS____Key];}}var ____SuperProtoOf____ClassS=____ClassS===null?null:____ClassS.prototype;Master.prototype=Object.create(____SuperProtoOf____ClassS);Master.prototype.constructor=Master;Master.__superConstructor__=____ClassS;
+var ____ClassA=React.Component;for(var ____ClassA____Key in ____ClassA){if(____ClassA.hasOwnProperty(____ClassA____Key)){Master[____ClassA____Key]=____ClassA[____ClassA____Key];}}var ____SuperProtoOf____ClassA=____ClassA===null?null:____ClassA.prototype;Master.prototype=Object.create(____SuperProtoOf____ClassA);Master.prototype.constructor=Master;Master.__superConstructor__=____ClassA;
 
   function Master() {"use strict";
-    ____ClassS.call(this);
+    ____ClassA.call(this);
     this.onChange = this.onChange.bind(this);
   }
 
@@ -118,7 +118,7 @@ Router.run(appRoutes, function(Handler) {
 },{"./components/about":2,"./components/activation-energy":3,"./components/enzyme-police":4,"./components/index":5,"./components/ingredients":6,"./components/inside-enzyme":7,"./components/substrate-diagram":9,"material-ui":11,"react":295,"react-router":104,"react-tap-event-plugin":122}],2:[function(require,module,exports){
 var React = require('react');
 
-var ____ClassU=React.Component;for(var ____ClassU____Key in ____ClassU){if(____ClassU.hasOwnProperty(____ClassU____Key)){About[____ClassU____Key]=____ClassU[____ClassU____Key];}}var ____SuperProtoOf____ClassU=____ClassU===null?null:____ClassU.prototype;About.prototype=Object.create(____SuperProtoOf____ClassU);About.prototype.constructor=About;About.__superConstructor__=____ClassU;function About(){"use strict";if(____ClassU!==null){____ClassU.apply(this,arguments);}}
+var ____ClassC=React.Component;for(var ____ClassC____Key in ____ClassC){if(____ClassC.hasOwnProperty(____ClassC____Key)){About[____ClassC____Key]=____ClassC[____ClassC____Key];}}var ____SuperProtoOf____ClassC=____ClassC===null?null:____ClassC.prototype;About.prototype=Object.create(____SuperProtoOf____ClassC);About.prototype.constructor=About;About.__superConstructor__=____ClassC;function About(){"use strict";if(____ClassC!==null){____ClassC.apply(this,arguments);}}
   Object.defineProperty(About.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
       React.createElement("p", null, "Hello, World!")
@@ -133,7 +133,7 @@ module.exports = About;
 var React     = require('react'),
     Practice  = require('./practice');
 
-var ____ClassV=React.Component;for(var ____ClassV____Key in ____ClassV){if(____ClassV.hasOwnProperty(____ClassV____Key)){ActivationEnergy[____ClassV____Key]=____ClassV[____ClassV____Key];}}var ____SuperProtoOf____ClassV=____ClassV===null?null:____ClassV.prototype;ActivationEnergy.prototype=Object.create(____SuperProtoOf____ClassV);ActivationEnergy.prototype.constructor=ActivationEnergy;ActivationEnergy.__superConstructor__=____ClassV;function ActivationEnergy(){"use strict";if(____ClassV!==null){____ClassV.apply(this,arguments);}}
+var ____ClassD=React.Component;for(var ____ClassD____Key in ____ClassD){if(____ClassD.hasOwnProperty(____ClassD____Key)){ActivationEnergy[____ClassD____Key]=____ClassD[____ClassD____Key];}}var ____SuperProtoOf____ClassD=____ClassD===null?null:____ClassD.prototype;ActivationEnergy.prototype=Object.create(____SuperProtoOf____ClassD);ActivationEnergy.prototype.constructor=ActivationEnergy;ActivationEnergy.__superConstructor__=____ClassD;function ActivationEnergy(){"use strict";if(____ClassD!==null){____ClassD.apply(this,arguments);}}
   Object.defineProperty(ActivationEnergy.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     var questions = [
       {
@@ -205,7 +205,7 @@ module.exports = ActivationEnergy;
 },{"./practice":8,"react":295}],4:[function(require,module,exports){
 var React = require('react');
 
-var ____ClassZ=React.Component;for(var ____ClassZ____Key in ____ClassZ){if(____ClassZ.hasOwnProperty(____ClassZ____Key)){EnzymePolice[____ClassZ____Key]=____ClassZ[____ClassZ____Key];}}var ____SuperProtoOf____ClassZ=____ClassZ===null?null:____ClassZ.prototype;EnzymePolice.prototype=Object.create(____SuperProtoOf____ClassZ);EnzymePolice.prototype.constructor=EnzymePolice;EnzymePolice.__superConstructor__=____ClassZ;function EnzymePolice(){"use strict";if(____ClassZ!==null){____ClassZ.apply(this,arguments);}}
+var ____ClassH=React.Component;for(var ____ClassH____Key in ____ClassH){if(____ClassH.hasOwnProperty(____ClassH____Key)){EnzymePolice[____ClassH____Key]=____ClassH[____ClassH____Key];}}var ____SuperProtoOf____ClassH=____ClassH===null?null:____ClassH.prototype;EnzymePolice.prototype=Object.create(____SuperProtoOf____ClassH);EnzymePolice.prototype.constructor=EnzymePolice;EnzymePolice.__superConstructor__=____ClassH;function EnzymePolice(){"use strict";if(____ClassH!==null){____ClassH.apply(this,arguments);}}
   Object.defineProperty(EnzymePolice.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
       React.createElement("div", null, 
@@ -286,10 +286,13 @@ module.exports = EnzymePolice;
 },{"react":295}],5:[function(require,module,exports){
 var React = require('react');
 
-var ____ClassT=React.Component;for(var ____ClassT____Key in ____ClassT){if(____ClassT.hasOwnProperty(____ClassT____Key)){Index[____ClassT____Key]=____ClassT[____ClassT____Key];}}var ____SuperProtoOf____ClassT=____ClassT===null?null:____ClassT.prototype;Index.prototype=Object.create(____SuperProtoOf____ClassT);Index.prototype.constructor=Index;Index.__superConstructor__=____ClassT;function Index(){"use strict";if(____ClassT!==null){____ClassT.apply(this,arguments);}}
+var ____ClassB=React.Component;for(var ____ClassB____Key in ____ClassB){if(____ClassB.hasOwnProperty(____ClassB____Key)){Index[____ClassB____Key]=____ClassB[____ClassB____Key];}}var ____SuperProtoOf____ClassB=____ClassB===null?null:____ClassB.prototype;Index.prototype=Object.create(____SuperProtoOf____ClassB);Index.prototype.constructor=Index;Index.__superConstructor__=____ClassB;function Index(){"use strict";if(____ClassB!==null){____ClassB.apply(this,arguments);}}
   Object.defineProperty(Index.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
-      React.createElement("p", null, "Hello, World!")
+      React.createElement("div", null, 
+        React.createElement("h2", null, "Biology 311C Final Project"), 
+        React.createElement("h3", null, "Robert Lynch, Haley Goertz, Isabelle Erickson, Dom Gillan")
+      )
     );
   }});
 
@@ -300,7 +303,7 @@ module.exports = Index;
 },{"react":295}],6:[function(require,module,exports){
 var React = require('react');
 
-var ____ClassX=React.Component;for(var ____ClassX____Key in ____ClassX){if(____ClassX.hasOwnProperty(____ClassX____Key)){Ingredients[____ClassX____Key]=____ClassX[____ClassX____Key];}}var ____SuperProtoOf____ClassX=____ClassX===null?null:____ClassX.prototype;Ingredients.prototype=Object.create(____SuperProtoOf____ClassX);Ingredients.prototype.constructor=Ingredients;Ingredients.__superConstructor__=____ClassX;function Ingredients(){"use strict";if(____ClassX!==null){____ClassX.apply(this,arguments);}}
+var ____ClassF=React.Component;for(var ____ClassF____Key in ____ClassF){if(____ClassF.hasOwnProperty(____ClassF____Key)){Ingredients[____ClassF____Key]=____ClassF[____ClassF____Key];}}var ____SuperProtoOf____ClassF=____ClassF===null?null:____ClassF.prototype;Ingredients.prototype=Object.create(____SuperProtoOf____ClassF);Ingredients.prototype.constructor=Ingredients;Ingredients.__superConstructor__=____ClassF;function Ingredients(){"use strict";if(____ClassF!==null){____ClassF.apply(this,arguments);}}
   Object.defineProperty(Ingredients.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     return (
       React.createElement("div", null, 
@@ -339,7 +342,7 @@ module.exports = Ingredients;
 var React     = require('react'),
     Practice  = require('./practice');
 
-var ____ClassY=React.Component;for(var ____ClassY____Key in ____ClassY){if(____ClassY.hasOwnProperty(____ClassY____Key)){InsideEnzyme[____ClassY____Key]=____ClassY[____ClassY____Key];}}var ____SuperProtoOf____ClassY=____ClassY===null?null:____ClassY.prototype;InsideEnzyme.prototype=Object.create(____SuperProtoOf____ClassY);InsideEnzyme.prototype.constructor=InsideEnzyme;InsideEnzyme.__superConstructor__=____ClassY;function InsideEnzyme(){"use strict";if(____ClassY!==null){____ClassY.apply(this,arguments);}}
+var ____ClassG=React.Component;for(var ____ClassG____Key in ____ClassG){if(____ClassG.hasOwnProperty(____ClassG____Key)){InsideEnzyme[____ClassG____Key]=____ClassG[____ClassG____Key];}}var ____SuperProtoOf____ClassG=____ClassG===null?null:____ClassG.prototype;InsideEnzyme.prototype=Object.create(____SuperProtoOf____ClassG);InsideEnzyme.prototype.constructor=InsideEnzyme;InsideEnzyme.__superConstructor__=____ClassG;function InsideEnzyme(){"use strict";if(____ClassG!==null){____ClassG.apply(this,arguments);}}
   Object.defineProperty(InsideEnzyme.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     var questions = [
       {
@@ -405,9 +408,9 @@ var React = require('react'),
 
 var $__0=      mui,RadioButtonGroup=$__0.RadioButtonGroup,RadioButton=$__0.RadioButton,RaisedButton=$__0.RaisedButton;
 
-var ____Class10=React.Component;for(var ____Class10____Key in ____Class10){if(____Class10.hasOwnProperty(____Class10____Key)){Practice[____Class10____Key]=____Class10[____Class10____Key];}}var ____SuperProtoOf____Class10=____Class10===null?null:____Class10.prototype;Practice.prototype=Object.create(____SuperProtoOf____Class10);Practice.prototype.constructor=Practice;Practice.__superConstructor__=____Class10;
+var ____ClassI=React.Component;for(var ____ClassI____Key in ____ClassI){if(____ClassI.hasOwnProperty(____ClassI____Key)){Practice[____ClassI____Key]=____ClassI[____ClassI____Key];}}var ____SuperProtoOf____ClassI=____ClassI===null?null:____ClassI.prototype;Practice.prototype=Object.create(____SuperProtoOf____ClassI);Practice.prototype.constructor=Practice;Practice.__superConstructor__=____ClassI;
   function Practice() {"use strict";
-    ____Class10.call(this);
+    ____ClassI.call(this);
     this.$Practice_onClick = this.$Practice_onClick.bind(this);
   }
 
@@ -459,7 +462,7 @@ module.exports = Practice;
 var React     = require('react'),
     Practice  = require('./practice');
 
-var ____ClassW=React.Component;for(var ____ClassW____Key in ____ClassW){if(____ClassW.hasOwnProperty(____ClassW____Key)){SubstrateDiagram[____ClassW____Key]=____ClassW[____ClassW____Key];}}var ____SuperProtoOf____ClassW=____ClassW===null?null:____ClassW.prototype;SubstrateDiagram.prototype=Object.create(____SuperProtoOf____ClassW);SubstrateDiagram.prototype.constructor=SubstrateDiagram;SubstrateDiagram.__superConstructor__=____ClassW;function SubstrateDiagram(){"use strict";if(____ClassW!==null){____ClassW.apply(this,arguments);}}
+var ____ClassE=React.Component;for(var ____ClassE____Key in ____ClassE){if(____ClassE.hasOwnProperty(____ClassE____Key)){SubstrateDiagram[____ClassE____Key]=____ClassE[____ClassE____Key];}}var ____SuperProtoOf____ClassE=____ClassE===null?null:____ClassE.prototype;SubstrateDiagram.prototype=Object.create(____SuperProtoOf____ClassE);SubstrateDiagram.prototype.constructor=SubstrateDiagram;SubstrateDiagram.__superConstructor__=____ClassE;function SubstrateDiagram(){"use strict";if(____ClassE!==null){____ClassE.apply(this,arguments);}}
   Object.defineProperty(SubstrateDiagram.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
     var questions = [
       {
